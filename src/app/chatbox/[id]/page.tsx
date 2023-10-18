@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 const ChatBox = ({ params }: { params: { id: string } }) => {
   const chatbot_id = params.id;
-  console.log("Chatbot Id is", chatbot_id);
 
   const router = useRouter();
   useEffect(() => {

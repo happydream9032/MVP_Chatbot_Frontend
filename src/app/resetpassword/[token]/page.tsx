@@ -26,8 +26,6 @@ const ResetPassword = ({ params }: { params: { token: string } }) => {
           if (response.data.status == "success") {
             toast.success("Reset Success!", { position: "top-right" });
             //router.push("/resetpassword");
-          } else {
-            console.log(response.data.data.message);
           }
         })
         .catch((error) => {

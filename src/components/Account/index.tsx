@@ -36,7 +36,6 @@ const AccountComponent = () => {
     if (!storedData) {
       router.push("/signin");
     } else {
-      console.log(storedData);
       let data = JSON.parse(storedData);
       setEmail(data.email);
     }
@@ -67,8 +66,6 @@ const AccountComponent = () => {
             localStorage.removeItem("logintype");
             toast.success("Deleting Successful!", { position: "top-right" });
             router.push("/signin");
-          } else {
-            console.log(response.data.message);
           }
         })
         .catch((error) => {
