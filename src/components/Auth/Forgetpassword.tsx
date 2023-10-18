@@ -21,7 +21,6 @@ const ForgetPasswordComponent = ({}) => {
       axios
         .post(apiUrl, data)
         .then((response) => {
-          console.log("111", response);
           if (response.data.status == 200) {
             toast.success("Check you email!", { position: "top-right" });
             router.push("/resetpassword");
